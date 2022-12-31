@@ -1,4 +1,6 @@
-# Test-App-Nuxt
+# Sample Application for a  Multi-Language Application with NuxtJS using its Built-in Nuxt i18n Module
+
+This repository contains the sample app for the article: [Article Link]()
 
 ## Build Setup
 
