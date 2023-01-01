@@ -1,3 +1,5 @@
+import i18n from './config/i18n'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -32,6 +34,29 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      '@nuxtjs/i18n',
+      {
+        i18n: {
+          vueI18nLoader: true,
+          defaultLocale: 'fr',
+          locales: [{
+            code: 'en',
+            name: 'English'
+          },
+        {
+          code: 'fr',
+          name: 'Français'
+        }],
+          detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'i18n_redirected',
+          },
+          switchLocalePath: '/:lang/:route',
+          vueI18n: i18n,
+        },
+      },
+    ],
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
